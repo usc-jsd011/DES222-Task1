@@ -21,7 +21,7 @@ variables are available to be used anywhere in our html document
 
 /* Defines the main container size, we are limiting to 1140px max and centring in the viewport */
 .main-container {
-    max-width: 1140px;
+    max-width: 72em;
     margin: 0 auto;
     font: 1em Helvetica, arial, sans-serif;
     color: var(--white-font);
@@ -36,7 +36,7 @@ variables are available to be used anywhere in our html document
 } */
 
 .main-container > * {
-    min-height: 32px;
+    min-height: 2em;
 }
   
 
@@ -44,16 +44,16 @@ variables are available to be used anywhere in our html document
 
 .banner {
     background-color: var(--color4);
-    height: 128px;
-    padding: 16px;
+    min-height: 8em;
+    padding: 1em;
 }
 
 .banner-title {
-    font-size: 48px;
+    font-size: 3em;
 }
 
 .banner-subtitle {
-    font-size: 36px;
+    font-size: 2em;
 }
 
 .team-member-card-panel {
@@ -61,12 +61,12 @@ variables are available to be used anywhere in our html document
 }
 
 .team-member-card {
-    max-width: 512px;
-    height: 512px;
+    max-width: 32em;
+    min-height: 32em;
     background-color: var(--color3);
     display: flex;
     flex-direction: column;
-    border-radius: 20px;
+    border-radius: 1em;
     overflow: hidden;
 }
 
@@ -75,7 +75,7 @@ variables are available to be used anywhere in our html document
 }
 
 .team-member-card-blurb {
-    padding: 8px;
+    padding: 0.5em;
 }
 
 
@@ -139,7 +139,7 @@ variables are available to be used anywhere in our html document
     display: grid;
     /* grid-template-columns: repeat(12, [col-start] 1fr); */
     /* grid-auto-rows: 32px; */
-    column-gap: 16px;
+    column-gap: 1em;
 }
   
 /* 
@@ -150,69 +150,68 @@ media queries for progressively bigger screen widths
 */
 .main-container {
     grid-template:
-        "bn1 bn1 bn1 bn1" minmax(128px, auto)
-        " .   .   .   . " minmax(32px, auto)
-        "tm1 tm1 tm1 tm1" minmax(512px, auto)
-        " .   .   .   . " minmax(32px, auto)
-        "tm2 tm2 tm2 tm2" minmax(512px, auto)
-        " .   .   .   . " minmax(32px, auto)
-        "tm3 tm3 tm3 tm3" minmax(512px, auto)
-        " .   .   .   . " minmax(32px, auto)
-        "td1 td1 td1 td1" minmax(224px, auto)
-        " .   .   .   . " minmax(32px, auto)
-        "sh1 sh1 sh1 sh1" minmax(128px, auto)
-        " .   .   .   . " minmax(32px, auto)
-        "sc1 sc1 sc1 sc1" minmax(1088px, auto)
-        " .   .   .   . " minmax(32px, auto)
-        "sc2 sc2 sc2 sc2" minmax(1088px, auto)
-        " .   .   .   . " minmax(32px, auto)
-        "sc3 sc3 sc3 sc3" minmax(1088px, auto)   
+        "bn1 bn1 bn1 bn1" minmax(8em, auto)
+        " .   .   .   . " minmax(2em, auto)
+        "tm1 tm1 tm1 tm1" minmax(32em, auto)
+        " .   .   .   . " minmax(2em, auto)
+        "tm2 tm2 tm2 tm2" minmax(32em, auto)
+        " .   .   .   . " minmax(2em, auto)
+        "tm3 tm3 tm3 tm3" minmax(32em, auto)
+        " .   .   .   . " minmax(2em, auto)
+        "td1 td1 td1 td1" minmax(14em, auto)
+        " .   .   .   . " minmax(2em, auto)
+        "sh1 sh1 sh1 sh1" minmax(8em, auto)
+        " .   .   .   . " minmax(2em, auto)
+        "sc1 sc1 sc1 sc1" minmax(68em, auto)
+        " .   .   .   . " minmax(2em, auto)
+        "sc2 sc2 sc2 sc2" minmax(68em, auto)
+        " .   .   .   . " minmax(2em, auto)
+        "sc3 sc3 sc3 sc3" minmax(68em, auto)
 }
     
 
 
-@media (min-width: 512px) {
+@media (min-width: 32em) {
     .main-container {
         grid-template:
-        "bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1" minmax(128px, auto)
-        " .   .   .   .   .   .   .   . " minmax(32px, auto)
-        "tm1 tm1 tm1 tm1 tm2 tm2 tm2 tm2" minmax(512px, auto)
-        " .   .   .   .   .   .   .   . " minmax(32px, auto)
-        " .   .  tm3 tm3 tm3 tm3  .   . " minmax(512px, auto)
-        " .   .   .   .   .   .   .   . " minmax(32px, auto)
-        "td1 td1 td1 td1 td1 td1 td1 td1" minmax(224px, auto)
-        " .   .   .   .   .   .   .   . " minmax(32px, auto)
-        "sh1 sh1 sh1 sh1 sh1 sh1 sh1 sh1" minmax(128px, auto)
-        " .   .   .   .   .   .   .   . " minmax(32px, auto)
-        "sc1 sc1 sc1 sc1 sc1 sc1 sc1 sc1" minmax(1088px, auto)
-        " .   .   .   .   .   .   .   . " minmax(32px, auto)
-        "sc2 sc2 sc2 sc2 sc2 sc2 sc2 sc2" minmax(1088px, auto)
-        " .   .   .   .   .   .   .   . " minmax(32px, auto)
-        "sc3 sc3 sc3 sc3 sc3 sc3 sc3 sc3" minmax(1088px, auto)   
+        "bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1" minmax(8em, auto)
+        " .   .   .   .   .   .   .   . " minmax(2em, auto)
+        "tm1 tm1 tm1 tm1 tm2 tm2 tm2 tm2" minmax(32em, auto)
+        " .   .   .   .   .   .   .   . " minmax(2em, auto)
+        " .   .  tm3 tm3 tm3 tm3  .   . " minmax(32em, auto)
+        " .   .   .   .   .   .   .   . " minmax(2em, auto)
+        "td1 td1 td1 td1 td1 td1 td1 td1" minmax(14em, auto)
+        " .   .   .   .   .   .   .   . " minmax(2em, auto)
+        "sh1 sh1 sh1 sh1 sh1 sh1 sh1 sh1" minmax(8em, auto)
+        " .   .   .   .   .   .   .   . " minmax(2em, auto)
+        "sc1 sc1 sc1 sc1 sc1 sc1 sc1 sc1" minmax(68em, auto)
+        " .   .   .   .   .   .   .   . " minmax(2em, auto)
+        "sc2 sc2 sc2 sc2 sc2 sc2 sc2 sc2" minmax(68em, auto)
+        " .   .   .   .   .   .   .   . " minmax(2em, auto)
+        "sc3 sc3 sc3 sc3 sc3 sc3 sc3 sc3" minmax(68em, auto)   
     }
 }
 
 
 
-@media (min-width: 800px) {
+@media (min-width: 50em) {
     .main-container {
         grid-template:
-        "bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1" minmax(128px, auto)
-        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(32px, auto)
-        "tm1 tm1 tm1 tm1 tm2 tm2 tm2 tm2 tm3 tm3 tm3 tm3" minmax(512px, auto)
-        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(32px, auto)
-        "td1 td1 td1 td1 td1 td1 td1 td1 td1 td1 td1 td1" minmax(224px, auto)
-        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(32px, auto)
-        "sh1 sh1 sh1 sh1 sh1 sh1 sh1 sh1 sh1 sh1 sh1 sh1" minmax(128px, auto)
-        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(32px, auto)
-        "sc1 sc1 sc1 sc1 sc1 sc1 sc1 sc1 sc1 sc1 sc1 sc1" minmax(1088px, auto)
-        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(32px, auto)
-        "sc2 sc2 sc2 sc2 sc2 sc2 sc2 sc2 sc2 sc2 sc2 sc2" minmax(1088px, auto)
-        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(32px, auto)
-        "sc3 sc3 sc3 sc3 sc3 sc3 sc3 sc3 sc3 sc3 sc3 sc3" minmax(1088px, auto)   
+        "bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1" minmax(8em, auto)
+        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+        "tm1 tm1 tm1 tm1 tm2 tm2 tm2 tm2 tm3 tm3 tm3 tm3" minmax(32em, auto)
+        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+        "td1 td1 td1 td1 td1 td1 td1 td1 td1 td1 td1 td1" minmax(14em, auto)
+        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+        "sh1 sh1 sh1 sh1 sh1 sh1 sh1 sh1 sh1 sh1 sh1 sh1" minmax(8em, auto)
+        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+        "sc1 sc1 sc1 sc1 sc1 sc1 sc1 sc1 sc1 sc1 sc1 sc1" minmax(68em, auto)
+        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+        "sc2 sc2 sc2 sc2 sc2 sc2 sc2 sc2 sc2 sc2 sc2 sc2" minmax(68em, auto)
+        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+        "sc3 sc3 sc3 sc3 sc3 sc3 sc3 sc3 sc3 sc3 sc3 sc3" minmax(68em, auto)   
     }
 }
-
 
 
 
