@@ -61,7 +61,7 @@ variables are available to be used anywhere in our html document
 }
 
 .team-member-card {
-    max-width: 32em;
+    /* max-width: 32em; */
     min-height: 32em;
     background-color: var(--color3);
     display: flex;
@@ -171,7 +171,7 @@ media queries for progressively bigger screen widths
     
 
 
-@media (min-width: 32em) {
+@media (min-width: 32em) and (max-resolution: 200dpi) {
     .main-container {
         grid-template:
         "bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1" minmax(8em, auto)
@@ -194,7 +194,7 @@ media queries for progressively bigger screen widths
 
 
 
-@media (min-width: 50em) {
+@media (min-width: 50em) and (max-resolution: 200dpi) {
     .main-container {
         grid-template:
         "bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1" minmax(8em, auto)
