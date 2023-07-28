@@ -14,10 +14,6 @@ variables are available to be used anywhere in our html document
     --black-font: #000000;
 }
 
-/* .team-member-card {
-
-} */
-
 
 /* Defines the main container size, we are limiting to 1140px max and centring in the viewport */
 .main-container {
@@ -27,13 +23,6 @@ variables are available to be used anywhere in our html document
     color: var(--white-font);
 }
 
-/* Any direct child element of then main container looks like a post-it note, with yellow background and orange border
-.main-container > * {
-  border: 2px solid #f08c00;
-  background-color: #ffec99;
-  border-radius: 5px;
-  padding: 10px;
-} */
 
 .main-container > * {
     min-height: 2em;
@@ -97,9 +86,7 @@ variables are available to be used anywhere in our html document
     grid-area: bn1;
 }
 
-/* #teamMemberCardPanel {
-    grid-area: cp1;
-} */
+
 #teamMemberCard1 {
     grid-area: tm1;
 }
@@ -213,87 +200,3 @@ media queries for progressively bigger screen widths
     }
 }
 
-
-
-/* This is the default layout (single column) which will be applied to any screen width smaller than our first breakpoint */
-/* .main-container > * {
-    grid-column: col-start / span 12;
-}
- 
-#banner {
-    grid-row: 1 / span 4; 
-}
-
-#teamMemberCardPanel {
-    grid-row: 7 / span 8;
-}
-
-#teamDescription {
-    grid-row: 17 / span 7;
-}
-
-#storiesSectionHeader {
-    grid-row: 26 / span 4;
-}
-
-#storyCard1 {
-    grid-row: 32 / span 34;
-}
-
-#storyCard2 {
-    grid-row: 68 / span 34;
-}
-
-#storyCard3 {
-    grid-row: 104 / span 34;
-} */
-
-
-
-
-
-/* First breakpoint is 500px. For screens at least 500px wide we jump to two column layout */
-/* @media (min-width: 500px) {
-    .side {
-      grid-column: col-start / span 3;
-      grid-row: 3;
-    }
-    .ad {
-      grid-column: col-start / span 3;
-      grid-row: 4;
-    }
-    .content,
-    .main-footer {
-      grid-column: col-start 4 / span 9;
-    }
-    nav ul {
-      display: flex;
-      justify-content: space-between;
-    }
-} */
-    
-/* Second breakpoint is 700px. Above this we use three column layout */
-/* @media (min-width: 700px) {
-    .main-nav {
-      grid-column: col-start / span 2;
-      grid-row: 2 / 4;
-    }
-    .content {
-      grid-column: col-start 3 / span 8;
-      grid-row: 2 / 4;
-    }
-    .side {
-      grid-column: col-start 11 / span 2;
-      grid-row: 2;
-    }
-    .ad {
-      grid-column: col-start 11 / span 2;
-      grid-row: 3;
-    }
-    .main-footer {
-      grid-column: col-start / span 12;
-    }
-    nav ul {
-      flex-direction: column;
-    }
-} */
