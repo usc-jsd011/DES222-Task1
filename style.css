@@ -18,7 +18,7 @@ variables are available to be used anywhere in our html document
 .main-container {
     max-width: 72em;
     margin: 0 auto;
-    font: 1em Helvetica, arial, sans-serif;
+    font-family: Inter;
     color: var(--white-font);
 }
 
