@@ -5,11 +5,11 @@ This is applied to the 'root' psuedo-element, which just means that these color
 variables are available to be used anywhere in our html document
 */
 :root {
-    --color1: #FFCDB2;
-    --color2: #FFB4A2;
-    --color3: #E5989B;
-    --color4: #B5838D;
-    --color5: #6D6875;
+    --color1: #D1C6AD;
+    --color2: #BBADA0;
+    --color3: #A1869E;
+    --color4: #757996;
+    --color5: #0B1D51;
     --white-font: #FFFFFF;
     --black-font: #000000;
 }
