@@ -5,131 +5,109 @@ This is applied to the 'root' psuedo-element, which just means that these color
 variables are available to be used anywhere in our html document
 */
 :root {
-    --color1: #D1C6AD;
-    --color2: #BBADA0;
-    --color3: #A1869E;
-    --color4: #757996;
-    --color5: #0B1D51;
     --white-font: #FFFFFF;
     --black-font: #000000;
+    /* add in other color variables for color pallete */
 }
 
-/* Defines the main container size, we are limiting to 1140px max and centring in the viewport */
+/* Defines the main container size, we are limiting to 72em max and centring in the viewport */
 .main-container {
     max-width: 72em;
     margin: 0 auto;
     font-family: Inter;
-    color: var(--white-font);
+    /* TODO: set the main font color */
 }
 
 /* Here we define the aspects of style of our elements other than their grid layout */
 .banner {
-    background-color: var(--color4);
-    min-height: 8em;
-    padding: 1em;
+    /* TODO: banner styling */
 }
 
 .banner-title {
-    font-size: 3em;
+    /* TODO: banner main title font styling */
 }
 
 .banner-subtitle {
-    font-size: 2em;
-    padding-left: 2px;
-    padding-top: 4px;
-}
-
-.team-member-card-panel {
-    display: contents;
+    /* TODO: banner subtitle font styling */
 }
 
 .team-member-card {
-    min-height: 32em;
-    background-color: var(--color3);
-    display: flex;
-    flex-direction: column;
-    border-radius: 1em;
-    overflow: hidden;
+    /* TODO: style the card as a column based flexbox with rounded corners */
 }
 
+/* this is the equivalent of setting the image rectangle to "Fill Container" in Figma */ 
 .team-member-card-image {
-    max-width: 100%;
+    width: 100%;
 }
 
 .team-member-card-blurb {
-    padding: 1em;
+    /* TODO: style the blurb with padding */
 }
-
 
 .our-clients-title {
-    background-color: var(--color2);
-    color: var(--color4);
-    font-size: 3em;
-    text-align: center;
-    padding: 0.5em;
-    border-radius: 1em;
+    /* TODO: style the 'Our Clients' text font */
 }
 
+/* this is the equivalent of setting the image rectangle to "Fill Container" in Figma */ 
 .client-icon {
     width: 100%;
 }
 
-
 /* now we create names for the grid areas for specific elements */
 #banner {
-    grid-area: bn1;
+    /* TODO: give the grid-area a name */
 }
 
 #teamMemberCard1 {
-    grid-area: tm1;
+    /* TODO: give the grid-area a name */
 }
 
 #teamMemberCard2 {
-    grid-area: tm2;
+    /* TODO: give the grid-area a name */
 }
 
 #teamMemberCard3 {
-    grid-area: tm3;
+    /* TODO: give the grid-area a name */
 }
 
 #ourClientsTitle {
-    grid-area: ct1;
+    /* TODO: give the grid-area a name */
 }
 
 #contactUs {
-    grid-area: cu1;
+    /* TODO: give the grid-area a name */
 }
 
 #clientIcon1 {
-    grid-area: ci1;
+    /* TODO: give the grid-area a name */
 }
 
 #clientIcon2 {
-    grid-area: ci2;
+    /* TODO: give the grid-area a name */
 }
 
 #clientIcon3 {
-    grid-area: ci3;
+    /* TODO: give the grid-area a name */
 }
 
 #clientIcon4 {
-    grid-area: ci4;
+    /* TODO: give the grid-area a name */
 }
 
 #clientIcon5 {
-    grid-area: ci5;
+    /* TODO: give the grid-area a name */
 }
 
 #clientIcon6 {
-    grid-area: ci6;
+    /* TODO: give the grid-area a name */
 }
 
 #clientIcon7 {
-    grid-area: ci7;
+    /* TODO: give the grid-area a name */
 }
 
 #clientIcon8 {
-    grid-area: ci8;
+    /* TODO: give the grid-area a name */
 }
 
 /* Use a flexible layout grid */
@@ -145,62 +123,17 @@ Because this CSS definition comes first, it will apply by default. Then we overr
 media queries for progressively bigger screen widths
 */
 .main-container {
-    grid-template:
-        "bn1 bn1 bn1 bn1" minmax(8em, auto)
-        " .   .   .   . " minmax(2em, auto)
-        "tm1 tm1 tm1 tm1" minmax(32em, auto)
-        " .   .   .   . " minmax(2em, auto)
-        "tm2 tm2 tm2 tm2" minmax(32em, auto)
-        " .   .   .   . " minmax(2em, auto)
-        "tm3 tm3 tm3 tm3" minmax(32em, auto)
-        " .   .   .   . " minmax(2em, auto)
-        "ct1 ct1 ct1 ct1" minmax(4em, auto)
-        " .   .   .   . " minmax(2em, auto)
-        "ci1 ci1 ci2 ci2" minmax(8em, auto)
-        " .   .   .   . " minmax(1em, auto)
-        "ci3 ci3 ci4 ci4" minmax(8em, auto)
-        " .   .   .   . " minmax(1em, auto)
-        "ci5 ci5 ci6 ci6" minmax(8em, auto)
-        " .   .   .   . " minmax(1em, auto)
-        "ci7 ci7 ci8 ci8" minmax(8em, auto)
+    /* TODO: setup the grid-template for mobile phone layout */
 }
-    
-
 
 @media (min-width: 50em) and (max-resolution: 2dppx) {
-       .main-container {
-        grid-template:
-        "bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1" minmax(8em, auto)
-        " .   .   .   .   .   .   .   . " minmax(2em, auto)
-        "tm1 tm1 tm1 tm1 tm2 tm2 tm2 tm2" minmax(32em, auto)
-        " .   .   .   .   .   .   .   . " minmax(2em, auto)
-        " .   .  tm3 tm3 tm3 tm3  .   . " minmax(32em, auto)
-        " .   .   .   .   .   .   .   . " minmax(2em, auto)
-        "ct1 ct1 ct1 ct1 ct1 ct1 ct1 ct1" minmax(4em, auto)
-        " .   .   .   .   .   .   .   . " minmax(2em, auto)
-        "ci1 ci1 ci1 ci1 ci2 ci2 ci2 ci2" minmax(8em, auto)
-        " .   .   .   .   .   .   .   . " minmax(1em, auto)
-        "ci3 ci3 ci3 ci3 ci4 ci4 ci4 ci4" minmax(8em, auto)
-        " .   .   .   .   .   .   .   . " minmax(1em, auto)
-        "ci5 ci5 ci5 ci5 ci6 ci6 ci6 ci6" minmax(8em, auto)
-        " .   .   .   .   .   .   .   . " minmax(1em, auto)
-        "ci7 ci7 ci7 ci7 ci8 ci8 ci8 ci8" minmax(8em, auto)   
+    .main-container {
+            /* TODO: setup the grid-template for tablet layout */
     }
 }
 
-
-
 @media (min-width: 75em) and (max-resolution: 2dppx) {
     .main-container {
-        grid-template:
-        "bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1" minmax(8em, auto)
-        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
-        "tm1 tm1 tm1 tm1 tm2 tm2 tm2 tm2 tm3 tm3 tm3 tm3" minmax(32em, auto)
-        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
-        "ct1 ct1 ct1 ct1 ct1 ct1 ct1 ct1 ct1 ct1 ct1 ct1" minmax(4em, auto)
-        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
-        "ci1 ci1 ci1 ci2 ci2 ci2 ci3 ci3 ci3 ci4 ci4 ci4" minmax(8em, auto)
-        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(1em, auto)
-        "ci5 ci5 ci5 ci6 ci6 ci6 ci7 ci7 ci7 ci8 ci8 ci8" minmax(8em, auto)
+        /* TODO: setup the grid-template for desktop layout */
     }
 }
