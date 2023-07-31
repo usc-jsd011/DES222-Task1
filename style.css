@@ -14,7 +14,6 @@ variables are available to be used anywhere in our html document
     --black-font: #000000;
 }
 
-
 /* Defines the main container size, we are limiting to 1140px max and centring in the viewport */
 .main-container {
     max-width: 72em;
@@ -23,14 +22,7 @@ variables are available to be used anywhere in our html document
     color: var(--white-font);
 }
 
-
-.main-container > * {
-    min-height: 2em;
-}
-  
-
 /* Here we define the aspects of style of our elements other than their grid layout */
-
 .banner {
     background-color: var(--color4);
     min-height: 8em;
@@ -43,6 +35,8 @@ variables are available to be used anywhere in our html document
 
 .banner-subtitle {
     font-size: 2em;
+    padding-left: 2px;
+    padding-top: 4px;
 }
 
 .team-member-card-panel {
@@ -50,7 +44,6 @@ variables are available to be used anywhere in our html document
 }
 
 .team-member-card {
-    /* max-width: 32em; */
     min-height: 32em;
     background-color: var(--color3);
     display: flex;
@@ -64,20 +57,21 @@ variables are available to be used anywhere in our html document
 }
 
 .team-member-card-blurb {
-    padding: 0.5em;
+    padding: 1em;
 }
 
 
-.team-description {
-    background-color: beige;
-}
-
-.section-header {
-    background-color: var(--color5);
-}
-
-.content-card {
+.our-clients-title {
     background-color: var(--color2);
+    color: var(--color4);
+    font-size: 3em;
+    text-align: center;
+    padding: 0.5em;
+    border-radius: 1em;
+}
+
+.client-icon {
+    width: 100%;
 }
 
 
@@ -85,7 +79,6 @@ variables are available to be used anywhere in our html document
 #banner {
     grid-area: bn1;
 }
-
 
 #teamMemberCard1 {
     grid-area: tm1;
@@ -99,33 +92,49 @@ variables are available to be used anywhere in our html document
     grid-area: tm3;
 }
 
-#teamDescription {
-    grid-area: td1;
+#ourClientsTitle {
+    grid-area: ct1;
 }
 
-#storiesSectionHeader {
-    grid-area: sh1;
+#contactUs {
+    grid-area: cu1;
 }
 
-#storyCard1 {
-    grid-area: sc1;
+#clientIcon1 {
+    grid-area: ci1;
 }
 
-#storyCard2 {
-    grid-area: sc2;
+#clientIcon2 {
+    grid-area: ci2;
 }
 
-#storyCard3 {
-    grid-area: sc3;
+#clientIcon3 {
+    grid-area: ci3;
 }
 
+#clientIcon4 {
+    grid-area: ci4;
+}
 
-/* Use a 12 column flexible layout grid */
-/* For vertical layout we use a margin, rather than grid-rows */
+#clientIcon5 {
+    grid-area: ci5;
+}
+
+#clientIcon6 {
+    grid-area: ci6;
+}
+
+#clientIcon7 {
+    grid-area: ci7;
+}
+
+#clientIcon8 {
+    grid-area: ci8;
+}
+
+/* Use a flexible layout grid */
 .main-container {
     display: grid;
-    /* grid-template-columns: repeat(12, [col-start] 1fr); */
-    /* grid-auto-rows: 32px; */
     column-gap: 1em;
 }
   
@@ -145,21 +154,21 @@ media queries for progressively bigger screen widths
         " .   .   .   . " minmax(2em, auto)
         "tm3 tm3 tm3 tm3" minmax(32em, auto)
         " .   .   .   . " minmax(2em, auto)
-        "td1 td1 td1 td1" minmax(14em, auto)
+        "ct1 ct1 ct1 ct1" minmax(4em, auto)
         " .   .   .   . " minmax(2em, auto)
-        "sh1 sh1 sh1 sh1" minmax(8em, auto)
-        " .   .   .   . " minmax(2em, auto)
-        "sc1 sc1 sc1 sc1" minmax(68em, auto)
-        " .   .   .   . " minmax(2em, auto)
-        "sc2 sc2 sc2 sc2" minmax(68em, auto)
-        " .   .   .   . " minmax(2em, auto)
-        "sc3 sc3 sc3 sc3" minmax(68em, auto)
+        "ci1 ci1 ci2 ci2" minmax(8em, auto)
+        " .   .   .   . " minmax(1em, auto)
+        "ci3 ci3 ci4 ci4" minmax(8em, auto)
+        " .   .   .   . " minmax(1em, auto)
+        "ci5 ci5 ci6 ci6" minmax(8em, auto)
+        " .   .   .   . " minmax(1em, auto)
+        "ci7 ci7 ci8 ci8" minmax(8em, auto)
 }
     
 
 
-@media (min-width: 32em) and (max-resolution: 200dpi) {
-    .main-container {
+@media (min-width: 50em) and (max-resolution: 2dppx) {
+       .main-container {
         grid-template:
         "bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1" minmax(8em, auto)
         " .   .   .   .   .   .   .   . " minmax(2em, auto)
@@ -167,36 +176,31 @@ media queries for progressively bigger screen widths
         " .   .   .   .   .   .   .   . " minmax(2em, auto)
         " .   .  tm3 tm3 tm3 tm3  .   . " minmax(32em, auto)
         " .   .   .   .   .   .   .   . " minmax(2em, auto)
-        "td1 td1 td1 td1 td1 td1 td1 td1" minmax(14em, auto)
+        "ct1 ct1 ct1 ct1 ct1 ct1 ct1 ct1" minmax(4em, auto)
         " .   .   .   .   .   .   .   . " minmax(2em, auto)
-        "sh1 sh1 sh1 sh1 sh1 sh1 sh1 sh1" minmax(8em, auto)
-        " .   .   .   .   .   .   .   . " minmax(2em, auto)
-        "sc1 sc1 sc1 sc1 sc1 sc1 sc1 sc1" minmax(68em, auto)
-        " .   .   .   .   .   .   .   . " minmax(2em, auto)
-        "sc2 sc2 sc2 sc2 sc2 sc2 sc2 sc2" minmax(68em, auto)
-        " .   .   .   .   .   .   .   . " minmax(2em, auto)
-        "sc3 sc3 sc3 sc3 sc3 sc3 sc3 sc3" minmax(68em, auto)   
+        "ci1 ci1 ci1 ci1 ci2 ci2 ci2 ci2" minmax(8em, auto)
+        " .   .   .   .   .   .   .   . " minmax(1em, auto)
+        "ci3 ci3 ci3 ci3 ci4 ci4 ci4 ci4" minmax(8em, auto)
+        " .   .   .   .   .   .   .   . " minmax(1em, auto)
+        "ci5 ci5 ci5 ci5 ci6 ci6 ci6 ci6" minmax(8em, auto)
+        " .   .   .   .   .   .   .   . " minmax(1em, auto)
+        "ci7 ci7 ci7 ci7 ci8 ci8 ci8 ci8" minmax(8em, auto)   
     }
 }
 
 
 
-@media (min-width: 50em) and (max-resolution: 200dpi) {
+@media (min-width: 75em) and (max-resolution: 2dppx) {
     .main-container {
         grid-template:
         "bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1" minmax(8em, auto)
         " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
         "tm1 tm1 tm1 tm1 tm2 tm2 tm2 tm2 tm3 tm3 tm3 tm3" minmax(32em, auto)
+        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
+        "ct1 ct1 ct1 ct1 ct1 ct1 ct1 ct1 ct1 ct1 ct1 ct1" minmax(4em, auto)
         " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
-        "td1 td1 td1 td1 td1 td1 td1 td1 td1 td1 td1 td1" minmax(14em, auto)
-        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
-        "sh1 sh1 sh1 sh1 sh1 sh1 sh1 sh1 sh1 sh1 sh1 sh1" minmax(8em, auto)
-        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
-        "sc1 sc1 sc1 sc1 sc1 sc1 sc1 sc1 sc1 sc1 sc1 sc1" minmax(68em, auto)
-        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
-        "sc2 sc2 sc2 sc2 sc2 sc2 sc2 sc2 sc2 sc2 sc2 sc2" minmax(68em, auto)
-        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
-        "sc3 sc3 sc3 sc3 sc3 sc3 sc3 sc3 sc3 sc3 sc3 sc3" minmax(68em, auto)   
+        "ci1 ci1 ci1 ci2 ci2 ci2 ci3 ci3 ci3 ci4 ci4 ci4" minmax(8em, auto)
+        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(1em, auto)
+        "ci5 ci5 ci5 ci6 ci6 ci6 ci7 ci7 ci7 ci8 ci8 ci8" minmax(8em, auto)
     }
 }
-
