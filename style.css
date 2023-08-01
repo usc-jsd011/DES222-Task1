@@ -74,10 +74,6 @@ variables are available to be used anywhere in our html document
     /* TODO: give the grid-area a name */
 }
 
-#contactUs {
-    /* TODO: give the grid-area a name */
-}
-
 #clientIcon1 {
     /* TODO: give the grid-area a name */
 }
@@ -126,13 +122,13 @@ media queries for progressively bigger screen widths
     /* TODO: setup the grid-template for mobile phone layout */
 }
 
-@media (min-width: 50em) and (max-resolution: 2dppx) {
+@media (min-width: 50em) {
     .main-container {
             /* TODO: setup the grid-template for tablet layout */
     }
 }
 
-@media (min-width: 75em) and (max-resolution: 2dppx) {
+@media (min-width: 75em) {
     .main-container {
         /* TODO: setup the grid-template for desktop layout */
     }
