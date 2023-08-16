@@ -111,7 +111,7 @@ variables are available to be used anywhere in our html document
     display: grid;
     column-gap: 1em;
 }
-  
+
 /* 
 Responsive Layout breakpoints. We start 'mobile-first' i.e. we define how the layout should look
 for the smallest screen sizes. In this case we want a single column that spans the main container.
@@ -120,6 +120,7 @@ media queries for progressively bigger screen widths
 */
 .main-container {
     /* TODO: setup the grid-template for mobile phone layout */
+    
 }
 
 @media (min-width: 50em) {
