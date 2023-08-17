@@ -35,7 +35,6 @@ body {
     color: var(--white-font);
     background-color: var(--background-color);
     justify-content: center;
-    align-items: center;
     text-align: center;
 
     grid-template: 
@@ -111,6 +110,7 @@ body {
     grid-area: c7;
     font-size: 2em;
     color: var(--blue-font);
+    justify-content: center;
 }
 
 #card8 {
